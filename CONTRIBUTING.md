@@ -1,4 +1,4 @@
-# Contributing to Piwik for Nextcloud
+# Contributing to pwk for Nextcloud
 
 :+1::tada: First off, thanks for taking the time to contribute!
 

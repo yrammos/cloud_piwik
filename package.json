@@ -1,23 +1,23 @@
 {
-  "name": "cloud_piwik",
+  "name": "cloud_pwk",
   "version": "0.5.3",
-  "description": "Track Nextcloud users with piwik/matomo",
+  "description": "Track Nextcloud users with pwk/matomo",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sualko/cloud_piwik.git"
+    "url": "https://github.com/sualko/cloud_pwk.git"
   },
   "keywords": [
     "nextcloud",
-    "piwik",
+    "pwk",
     "matomo",
     "tracking"
   ],
   "author": "Klaus Herberth <klaus@jsxc.org>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sualko/cloud_piwik/issues"
+    "url": "https://github.com/sualko/cloud_pwk/issues"
   },
-  "homepage": "https://github.com/sualko/cloud_piwik",
+  "homepage": "https://github.com/sualko/cloud_pwk",
   "devDependencies": {
     "grunt": "^1.0.4",
     "grunt-banner": "^0.6.0",

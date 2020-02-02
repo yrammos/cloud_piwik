@@ -1,5 +1,5 @@
 <?php
-namespace OCA\Piwik\Settings;
+namespace OCA\Pwk\Settings;
 
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\IConfig;
@@ -27,13 +27,13 @@ class Admin implements ISettings
     public function getForm()
     {
         $parameters = [
-            'url' => $this->config->getAppValue('piwik', 'url'),
-            'siteId' => $this->config->getAppValue('piwik', 'siteId'),
-            'trackDir' => $this->config->getAppValue('piwik', 'trackDir'),
-            'trackUser' => $this->config->getAppValue('piwik', 'trackUser'),
+            'url' => $this->config->getAppValue('pwk', 'url'),
+            'siteId' => $this->config->getAppValue('pwk', 'siteId'),
+            'trackDir' => $this->config->getAppValue('pwk', 'trackDir'),
+            'trackUser' => $this->config->getAppValue('pwk', 'trackUser'),
         ];
 
-        return new TemplateResponse('piwik', 'settings/admin', $parameters);
+        return new TemplateResponse('pwk', 'settings/admin', $parameters);
     }
 
     /**

@@ -1,5 +1,5 @@
 <?php
-namespace OCA\Piwik;
+namespace OCA\Pwk;
 
 use OCP\IConfig;
 

@@ -13,10 +13,10 @@ module.exports = function(grunt) {
          gruntfile: {
             src: 'Gruntfile.js'
          },
-         files: ['js/*.js', '!js/piwik.js']
+         files: ['js/*.js', '!js/pwk.js']
       },
       jsbeautifier: {
-         files: ['Gruntfile.js', 'js/*.js', '!js/piwik.js'],
+         files: ['Gruntfile.js', 'js/*.js', '!js/pwk.js'],
          options: {
             config: '.jsbeautifyrc'
          }
@@ -38,7 +38,7 @@ module.exports = function(grunt) {
                banner: '<%= meta.banner %>'
             },
             files: {
-               src: ['build/js/*.js', '!build/js/piwik.js']
+               src: ['build/js/*.js', '!build/js/pwk.js']
             }
          }
       },
@@ -75,13 +75,13 @@ module.exports = function(grunt) {
       compress: {
          main: {
             options: {
-               archive: "archives/cloud_piwik-<%= meta.app.version %>.tar.gz",
+               archive: "archives/cloud_pwk-<%= meta.app.version %>.tar.gz",
                mode: 'tgz'
             },
             files: [{
                src: ['**'],
                expand: true,
-               dest: 'piwik/',
+               dest: 'pwk/',
                cwd: 'build/'
             }]
          }
@@ -89,9 +89,9 @@ module.exports = function(grunt) {
       exec: {
          signRelease: {
             command: 'openssl dgst -sha512 -sign ' +
-               '~/.nextcloud/certificates/piwik.key ' +
-               'archives/cloud_piwik-<%= meta.app.version %>.tar.gz | openssl base64 > ' +
-               'archives/cloud_piwik-<%= meta.app.version %>.tar.gz.ncsig'
+               '~/.nextcloud/certificates/pwk.key ' +
+               'archives/cloud_pwk-<%= meta.app.version %>.tar.gz | openssl base64 > ' +
+               'archives/cloud_pwk-<%= meta.app.version %>.tar.gz.ncsig'
          }
       }
    });

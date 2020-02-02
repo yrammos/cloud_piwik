@@ -1,12 +1,12 @@
 <?php
-namespace OCA\Piwik\Controller;
+namespace OCA\Pwk\Controller;
 
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http\DataDownloadResponse;
 use OCP\AppFramework\Http\Response;
 use OCP\IConfig;
 use OCP\IRequest;
-use OCA\Piwik\Config;
+use OCA\Pwk\Config;
 
 class JavaScriptController extends Controller
 {
@@ -43,7 +43,7 @@ class JavaScriptController extends Controller
             'trackUser' => $this->config->getBooleanAppValue('trackUser'),
         ];
 
-        $script = "var cloudPiwikOptions = '".json_encode($options)."';";
+        $script = "var cloudPwkOptions = '".json_encode($options)."';";
         $script = file_get_contents(__DIR__ . '/../../js/track.js');
         $script = str_replace('%OPTIONS%', json_encode($options), $script);
 

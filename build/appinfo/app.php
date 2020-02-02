@@ -1,11 +1,11 @@
 <?php
-$url = \OC::$server->getConfig()->getAppValue('piwik', 'url');
+$url = \OC::$server->getConfig()->getAppValue('pwk', 'url');
 
 if (!empty($url)) {
     \OCP\Util::addHeader(
         'script',
         [
-            'src' => \OC::$server->getURLGenerator()->linkToRoute('piwik.JavaScript.tracking'),
+            'src' => \OC::$server->getURLGenerator()->linkToRoute('pwk.JavaScript.tracking'),
             'nonce' => \OC::$server->getContentSecurityPolicyNonceManager()->getNonce(),
         ], ''
     );

@@ -1,9 +1,9 @@
 <?php
-namespace OCA\Piwik\Controller;
+namespace OCA\Pwk\Controller;
 
 use OCP\AppFramework\Controller;
 use OCP\IRequest;
-use OCA\Piwik\Config;
+use OCA\Pwk\Config;
 
 class SettingsController extends Controller
 {

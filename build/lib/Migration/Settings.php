@@ -1,5 +1,5 @@
 <?php
-namespace OCA\Piwik\Migration;
+namespace OCA\Pwk\Migration;
 
 use OCP\IConfig;
 use OCP\Migration\IOutput;
@@ -23,7 +23,7 @@ class Settings implements IRepairStep
      */
     public function getName()
     {
-        return 'Update Piwik/Matomo settings format';
+        return 'Update Pwk/Matomo settings format';
     }
 
     /**
@@ -32,17 +32,17 @@ class Settings implements IRepairStep
     public function run(IOutput $output)
     {
         $config = $this->config;
-        $oldPiwikConfig = $config->getAppValue('piwik', 'piwik');
+        $oldPwkConfig = $config->getAppValue('pwk', 'pwk');
 
-        if (!empty($oldPiwikConfig)) {
-            $oldPiwikConfig = json_decode($oldPiwikConfig);
-            $trackDir = $oldPiwikConfig->trackDir;
+        if (!empty($oldPwkConfig)) {
+            $oldPwkConfig = json_decode($oldPwkConfig);
+            $trackDir = $oldPwkConfig->trackDir;
 
-            $config->setAppValue('piwik', 'url', $oldPiwikConfig->url);
-            $config->setAppValue('piwik', 'siteId', $oldPiwikConfig->siteId);
-            $config->setAppValue('piwik', 'trackDir', $trackDir === 'on');
+            $config->setAppValue('pwk', 'url', $oldPwkConfig->url);
+            $config->setAppValue('pwk', 'siteId', $oldPwkConfig->siteId);
+            $config->setAppValue('pwk', 'trackDir', $trackDir === 'on');
 
-            $config->deleteAppValue('piwik', 'piwik');
+            $config->deleteAppValue('pwk', 'pwk');
         } else {
             $output->info("Migration already executed");
         }

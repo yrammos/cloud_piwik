@@ -1,17 +1,17 @@
 <?xml version="1.0"?>
 <info>
-	<id>piwik</id>
-	<name>Piwik/Matomo Tracking</name>
-	<summary>Track users with Piwik/Matomo</summary>
-	<description>Track users with Piwik/Matomo</description>
+	<id>pwk</id>
+	<name>Pwk/Matomo Tracking</name>
+	<summary>Track users with Pwk/Matomo</summary>
+	<description>Track users with Pwk/Matomo</description>
 	<version>0.5.3</version>
 	<licence>agpl</licence>
 	<author>Klaus Herberth</author>
 	<category>tools</category>
 
-	<website>http://sualko.github.io/cloud_piwik/</website>
-	<bugs>https://github.com/sualko/cloud_piwik/issues</bugs>
-	<repository type="git">https://github.com/sualko/cloud_piwik.git</repository>
+	<website>http://sualko.github.io/cloud_pwk/</website>
+	<bugs>https://github.com/sualko/cloud_pwk/issues</bugs>
+	<repository type="git">https://github.com/sualko/cloud_pwk.git</repository>
 
 	<dependencies>
 		<nextcloud min-version="14" max-version="17"/>
@@ -19,11 +19,11 @@
 
 	<repair-steps>
 		<post-migration>
-			<step>OCA\Piwik\Migration\Settings</step>
+			<step>OCA\Pwk\Migration\Settings</step>
 		</post-migration>
 	</repair-steps>
 
 	<settings>
-		<admin>OCA\Piwik\Settings\Admin</admin>
+		<admin>OCA\Pwk\Settings\Admin</admin>
 	</settings>
 </info>

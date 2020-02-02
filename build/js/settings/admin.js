@@ -1,15 +1,15 @@
 /* global OCP, OC */
 
 $(function() {
-   $('#piwikAdblockerWarning').hide();
+   $('#pwkAdblockerWarning').hide();
 
    function showRequestResult(element, result) {
       if (element.attr('type') === 'checkbox') {
          element = $('label[for="' + element.attr('id') + '"]');
       }
 
-      element.removeClass('piwik-success piwik-error');
-      element.addClass('piwik-' + result);
+      element.removeClass('pwk-success pwk-error');
+      element.addClass('pwk-' + result);
 
       var timeout = element.data('timeout');
 
@@ -18,22 +18,22 @@ $(function() {
       }
 
       timeout = setTimeout(function() {
-         element.removeClass('piwik-success piwik-error');
+         element.removeClass('pwk-success pwk-error');
       }, 1000);
 
       element.data('timeout', timeout);
    }
 
-   $('#piwikUrl').attr('placeholder', 'e.g. //' + window.location.host + '/piwik/');
+   $('#pwkUrl').attr('placeholder', 'e.g. //' + window.location.host + '/pwk/');
 
-   $('#piwikSettings input').change(function() {
+   $('#pwkSettings input').change(function() {
       var element = $(this);
       var key = $(this).attr('name');
       var value = $(this).attr('type') === 'checkbox' ? $(this).prop('checked') : $(this).val();
 
       $.ajax({
          method: 'PUT',
-         url: OC.generateUrl('apps/piwik/settings/' + key),
+         url: OC.generateUrl('apps/pwk/settings/' + key),
          data: {
             value: value
          },

@@ -1,10 +1,10 @@
 /*!
- * cloud_piwik v0.5.3 - 2019-08-22
+ * cloud_pwk v0.5.3 - 2020-02-02
  * 
- * Copyright (c) 2019 Klaus Herberth <klaus@jsxc.org> <br>
+ * Copyright (c) 2020 Klaus Herberth <klaus@jsxc.org> <br>
  * Released under the MIT license
  * 
- * Please see https://github.com/sualko/cloud_piwik
+ * Please see https://github.com/sualko/cloud_pwk
  * 
  * @author Klaus Herberth <klaus@jsxc.org>
  * @version 0.5.3
@@ -54,7 +54,7 @@ var _paq = _paq || [];
             shareValue = pathParts[3];
          }
 
-         // save share id in slot 2
+         // save share id in slot 2.
          _paq.push(['setCustomVariable', '2', 'Shares', pathParts[3], 'page']);
       }
 
@@ -78,8 +78,8 @@ var _paq = _paq || [];
       });
    }
 
-   // set piwik options
-   _paq.push(['setTrackerUrl', options.url + 'piwik.php']);
+   // set pwk options
+   _paq.push(['setTrackerUrl', options.url + 'cdn/mtm/w.php']);
    _paq.push(['setSiteId', options.siteId]);
 
    if (app !== 'files' || options.trackDir !== 'on') {
@@ -87,15 +87,15 @@ var _paq = _paq || [];
       _paq.push(['trackPageView']);
    }
 
-   if (typeof Piwik === 'undefined') {
-      // load piwik library
+   if (typeof Pwk === 'undefined') {
+      // load pwk library
       var d = document,
          g = d.createElement('script'),
          s = d.getElementsByTagName('script')[0];
       g.type = 'text/javascript';
       g.async = true;
       g.defer = true;
-      g.src = options.url + 'piwik.js';
+      g.src = options.url + 'cdn/mtm/w.php';
       s.parentNode.insertBefore(g, s);
    }
 }());
