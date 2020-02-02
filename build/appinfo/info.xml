@@ -6,15 +6,15 @@
 	<description>Track users with Pwk/Matomo</description>
 	<version>0.5.3</version>
 	<licence>agpl</licence>
-	<author>Klaus Herberth</author>
+	<author>Klaus Herberth/Yannis Rammos</author>
 	<category>tools</category>
 
 	<website>http://sualko.github.io/cloud_pwk/</website>
 	<bugs>https://github.com/sualko/cloud_pwk/issues</bugs>
-	<repository type="git">https://github.com/sualko/cloud_pwk.git</repository>
+	<repository type="git">https://github.com/yrammos/cloud_pwk.git</repository>
 
 	<dependencies>
-		<nextcloud min-version="14" max-version="17"/>
+		<nextcloud min-version="14" max-version="20"/>
 	</dependencies>
 
 	<repair-steps>
